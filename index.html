@@ -5,217 +5,206 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hariprasad AK | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
-
+:root{
+ --bg:#050816;
+ --card:rgba(255,255,255,.06);
+ --purple:#A855F7;
+ --blue:#3B82F6;
+ --pink:#EC4899;
+ --text:#F8FAFC;
+ --gray:#CBD5E1;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{
-    font-family:'Inter',sans-serif;
-    background:#060816;
-    color:#fff;
-    overflow-x:hidden;
+ font-family:'Inter',sans-serif;
+ background:var(--bg);
+ color:var(--text);
+ overflow-x:hidden;
 }
-
-/* Background Glow */
 body::before{
-    content:"";
-    position:fixed;
-    width:650px;
-    height:650px;
-    background:#7c3aed;
-    filter:blur(180px);
-    top:-220px;
-    left:-180px;
-    opacity:.35;
-    z-index:-2;
+ content:"";
+ position:fixed;
+ inset:0;
+ background:
+ radial-gradient(circle at 20% 20%, rgba(168,85,247,.18), transparent 35%),
+ radial-gradient(circle at 80% 30%, rgba(59,130,246,.15), transparent 35%);
+ z-index:-2;
 }
-body::after{
-    content:"";
-    position:fixed;
-    width:500px;
-    height:500px;
-    background:#2563eb;
-    filter:blur(170px);
-    bottom:-170px;
-    right:-150px;
-    opacity:.3;
-    z-index:-2;
-}
-
-/* Navbar */
 nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    background:rgba(5,8,22,.55);
-    backdrop-filter:blur(15px);
-    z-index:999;
+ position:fixed;
+ top:0;
+ width:100%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:18px 8%;
+ background:rgba(5,8,22,.75);
+ backdrop-filter:blur(12px);
+ border-bottom:1px solid rgba(255,255,255,.08);
+ z-index:100;
 }
 .logo{
-    font-family:'Orbitron';
-    color:#A855F7;
-    font-size:22px;
+ font-family:'Orbitron';
+ color:var(--purple);
+ font-size:22px;
 }
 nav ul{
-    display:flex;
-    list-style:none;
-    gap:28px;
+ display:flex;
+ gap:25px;
+ list-style:none;
 }
 nav a{
-    color:#D1D5DB;
-    text-decoration:none;
+ color:#d1d5db;
+ text-decoration:none;
+ transition:.3s;
 }
-nav a:hover{
-    color:#fff;
-}
-
-/* Hero */
+nav a:hover{color:#fff}
 .hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 8%;
-    background:
-    linear-gradient(rgba(6,8,22,.82),rgba(6,8,22,.9)),
-    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
-    background-size:cover;
-    background-position:center;
+ height:100vh;
+ display:flex;
+ align-items:center;
+ padding:0 8%;
+ background:
+ linear-gradient(rgba(5,8,22,.82),rgba(5,8,22,.92)),
+ url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1600&q=80");
+ background-size:cover;
+ background-position:center;
 }
-.hero-content{
-    max-width:850px;
-}
-.tag{
-    display:inline-block;
-    padding:8px 18px;
-    border-radius:30px;
-    border:1px solid #8B5CF6;
-    background:rgba(139,92,246,.12);
-    color:#D8B4FE;
-    margin-bottom:20px;
+.badge{
+ display:inline-block;
+ padding:8px 16px;
+ border-radius:30px;
+ border:1px solid var(--purple);
+ background:rgba(168,85,247,.12);
+ color:#D8B4FE;
 }
 h1{
-    font-family:'Orbitron';
-    font-size:70px;
-    line-height:1.1;
+ font-family:'Orbitron';
+ font-size:68px;
+ line-height:1.1;
+ margin:20px 0;
 }
 h1 span{
-    background:linear-gradient(90deg,#A855F7,#3B82F6,#EC4899);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+ background:linear-gradient(90deg,var(--purple),var(--blue),var(--pink));
+ -webkit-background-clip:text;
+ -webkit-text-fill-color:transparent;
 }
 #typing{
-    height:35px;
-    margin:22px 0;
-    font-size:22px;
-    color:#60A5FA;
-    font-weight:600;
+ color:#60A5FA;
+ font-size:22px;
+ height:32px;
+ margin-bottom:20px;
 }
 .hero p{
-    color:#CBD5E1;
-    line-height:1.8;
-    font-size:17px;
+ max-width:650px;
+ color:var(--gray);
+ line-height:1.8;
 }
 .btns{
-    display:flex;
-    justify-content:center;
-    gap:18px;
-    margin-top:30px;
-    flex-wrap:wrap;
+ display:flex;
+ gap:16px;
+ margin-top:28px;
+ flex-wrap:wrap;
 }
 .btn{
-    padding:14px 28px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:600;
+ padding:14px 24px;
+ border-radius:12px;
+ text-decoration:none;
+ font-weight:600;
 }
 .primary{
-    background:linear-gradient(135deg,#8B5CF6,#2563EB);
-    color:#fff;
+ background:linear-gradient(135deg,var(--purple),var(--blue));
+ color:#fff;
 }
-.outline{
-    border:1px solid #8B5CF6;
-    color:#fff;
+.glass{
+ background:rgba(255,255,255,.05);
+ border:1px solid rgba(255,255,255,.12);
+ color:#fff;
 }
-
-/* Stats */
 .stats{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:45px;
-}
-.stat{
-    background:rgba(255,255,255,.06);
-    border:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(10px);
-    border-radius:18px;
-    padding:18px;
-}
-.stat h3{
-    font-family:'Orbitron';
-    color:#A855F7;
-    font-size:28px;
-}
-
-/* Sections */
-section{
-    padding:90px 8%;
-}
-.title{
-    font-family:'Orbitron';
-    text-align:center;
-    font-size:34px;
-    color:#D8B4FE;
-    margin-bottom:40px;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:22px;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:18px;
+ margin-top:45px;
 }
 .card{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    backdrop-filter:blur(14px);
-    border-radius:20px;
-    padding:24px;
-    transition:.35s;
+ background:var(--card);
+ border:1px solid rgba(255,255,255,.08);
+ backdrop-filter:blur(12px);
+ border-radius:18px;
+ padding:22px;
+ transition:.35s;
 }
 .card:hover{
-    transform:translateY(-8px);
-    border-color:#8B5CF6;
-    box-shadow:0 20px 40px rgba(139,92,246,.25);
+ transform:translateY(-8px);
+ border-color:var(--purple);
+ box-shadow:0 20px 40px rgba(168,85,247,.25);
+}
+.stat h2{
+ font-family:'Orbitron';
+ color:#C084FC;
+ font-size:28px;
+}
+section{
+ padding:90px 8%;
+}
+.title{
+ font-family:'Orbitron';
+ text-align:center;
+ color:#D8B4FE;
+ font-size:34px;
+ margin-bottom:40px;
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:20px;
 }
 .bar{
-    height:8px;
-    background:#1F2937;
-    border-radius:20px;
-    margin-top:10px;
-    overflow:hidden;
+ height:8px;
+ background:#1F2937;
+ border-radius:20px;
+ margin-top:10px;
+ overflow:hidden;
 }
 .fill{
-    height:100%;
-    background:linear-gradient(90deg,#8B5CF6,#2563EB);
+ height:100%;
+ background:linear-gradient(90deg,var(--purple),var(--blue));
+}
+.timeline{
+ border-left:2px solid var(--purple);
+ max-width:760px;
+ margin:auto;
+ padding-left:28px;
+}
+.item{
+ margin-bottom:28px;
+ position:relative;
+}
+.item::before{
+ content:"";
+ position:absolute;
+ left:-36px;
+ top:5px;
+ width:14px;
+ height:14px;
+ border-radius:50%;
+ background:var(--purple);
+ box-shadow:0 0 16px var(--purple);
 }
 footer{
-    text-align:center;
-    padding:28px;
-    color:#94A3B8;
-    border-top:1px solid rgba(255,255,255,.08);
+ text-align:center;
+ padding:30px;
+ color:#94A3B8;
+ border-top:1px solid rgba(255,255,255,.08);
 }
-
-/* Mobile */
-@media(max-width:768px){
-    h1{font-size:42px;}
-    nav ul{display:none;}
-    .stats{grid-template-columns:repeat(2,1fr);}
+@media(max-width:900px){
+ h1{font-size:42px}
+ nav ul{display:none}
+ .stats{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
@@ -223,62 +212,55 @@ footer{
 <body>
 
 <nav>
-<div class="logo">HARIPRASAD</div>
+<div class="logo">HARIPRASAD AK</div>
 
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<!-- HERO (NO PHOTO) -->
-
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
-<div class="tag">
-AZ-900 • Flutter • AI • SIH Finalist
-</div>
+<div class="badge">AZ-900 • Flutter • AI • SIH Finalist</div>
 
-<h1>
-HARIPRASAD <span>AK</span>
-</h1>
+<h1>HARIPRASAD <span>AK</span></h1>
 
 <div id="typing"></div>
 
 <p>
-Computer Science Engineer specializing in Flutter Development, UI/UX Design,
-Artificial Intelligence and Cloud Computing. Passionate about building premium
-digital experiences with modern technologies.
+Computer Science & Engineering student at Karpagam Institute of Technology passionate about Flutter Development, UI/UX Design, Artificial Intelligence and Cloud Computing. I enjoy building beautiful applications that solve real-world problems.
 </p>
 
 <div class="btns">
-<a href="#" class="btn primary">Download Resume</a>
-<a href="#" class="btn outline">LinkedIn</a>
+<a href="assets/resume.pdf" class="btn primary">Download Resume</a>
+<a href="https://linkedin.com/in/hariprasad-ak-61a252294" class="btn glass">LinkedIn</a>
 </div>
 
 <div class="stats">
 
-<div class="stat">
-<h3>03</h3>
-<p>Projects</p>
-</div>
-
-<div class="stat">
-<h3>02</h3>
+<div class="card stat">
+<h2>02+</h2>
 <p>Internships</p>
 </div>
 
-<div class="stat">
-<h3>AZ</h3>
+<div class="card stat">
+<h2>03+</h2>
+<p>Projects</p>
+</div>
+
+<div class="card stat">
+<h2>AZ</h2>
 <p>Certified</p>
 </div>
 
-<div class="stat">
-<h3>2027</h3>
+<div class="card stat">
+<h2>2027</h2>
 <p>Graduate</p>
 </div>
 
@@ -294,9 +276,7 @@ digital experiences with modern technologies.
 
 <div class="card">
 <p>
-I am pursuing BE Computer Science & Engineering at Karpagam Institute of Technology.
-My interests include Flutter, Firebase, Python, Azure Cloud and UI/UX Design.
-I enjoy creating elegant software solutions for real-world problems.
+I am a passionate software developer with experience in Flutter, Firebase, Python and Cloud technologies. My goal is to become a professional Full Stack & AI Engineer while creating innovative digital products for people and businesses.
 </p>
 </div>
 
@@ -304,7 +284,7 @@ I enjoy creating elegant software solutions for real-world problems.
 
 <section id="skills">
 
-<h2 class="title">TECH STACK</h2>
+<h2 class="title">TECHNICAL SKILLS</h2>
 
 <div class="grid">
 
@@ -324,8 +304,18 @@ I enjoy creating elegant software solutions for real-world problems.
 </div>
 
 <div class="card">
-<h3>UI / UX</h3>
+<h3>JavaScript</h3>
+<div class="bar"><div class="fill" style="width:78%"></div></div>
+</div>
+
+<div class="card">
+<h3>UI / UX Design</h3>
 <div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="card">
+<h3>AWS & Azure</h3>
+<div class="bar"><div class="fill" style="width:75%"></div></div>
 </div>
 
 </div>
@@ -340,17 +330,72 @@ I enjoy creating elegant software solutions for real-world problems.
 
 <div class="card">
 <h3>🌱 AI Crop Recommendation</h3>
-<p>Machine learning based agriculture mobile application using Flutter & Firebase.</p>
+<p>Flutter + Firebase + ML application that predicts the best crops using soil type, budget and seasonal analysis.</p>
 </div>
 
 <div class="card">
 <h3>🏙 Civic Ease</h3>
-<p>Cloud based civic complaint system with NLP and image processing.</p>
+<p>Smart civic issue reporting platform using NLP, image processing and cloud deployment.</p>
 </div>
 
 <div class="card">
 <h3>🚲 Smart Bike Parking</h3>
-<p>Automatic number plate recognition with digital payment parking.</p>
+<p>Cashless bike parking system with automatic number plate recognition and digital payment.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="title">EDUCATION & EXPERIENCE</h2>
+
+<div class="timeline">
+
+<div class="item">
+<h3>BE Computer Science & Engineering</h3>
+<p>Karpagam Institute of Technology • 2023 – 2027</p>
+</div>
+
+<div class="item">
+<h3>UI/UX Design Intern</h3>
+<p>Crescent Info Tech • 2024</p>
+</div>
+
+<div class="item">
+<h3>Web Development Intern</h3>
+<p>Crescent Info Tech • August 2024</p>
+</div>
+
+<div class="item">
+<h3>Microsoft Azure Fundamentals</h3>
+<p>AZ-900 Certified</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">ACHIEVEMENTS</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏆 Smart India Hackathon</h3>
+<p>Finalist with an innovative civic technology solution.</p>
+</div>
+
+<div class="card">
+<h3>☁ Azure Certified</h3>
+<p>Successfully completed Microsoft Azure Fundamentals (AZ-900).</p>
+</div>
+
+<div class="card">
+<h3>💻 Web Developer</h3>
+<p>Designed responsive websites using HTML, CSS, JavaScript and Firebase.</p>
 </div>
 
 </div>
@@ -359,7 +404,7 @@ I enjoy creating elegant software solutions for real-world problems.
 
 <section id="contact">
 
-<h2 class="title">CONTACT</h2>
+<h2 class="title">LET'S CONNECT</h2>
 
 <div class="grid">
 
@@ -374,6 +419,11 @@ I enjoy creating elegant software solutions for real-world problems.
 </div>
 
 <div class="card">
+<h3>💼 LinkedIn</h3>
+<p>linkedin.com/in/hariprasad-ak-61a252294</p>
+</div>
+
+<div class="card">
 <h3>📍 Location</h3>
 <p>Coimbatore, Tamil Nadu</p>
 </div>
@@ -383,7 +433,7 @@ I enjoy creating elegant software solutions for real-world problems.
 </section>
 
 <footer>
-Designed by Hariprasad AK • 2026
+Designed & Developed by <strong>Hariprasad AK</strong> • 2026
 </footer>
 
 <script>
@@ -391,13 +441,14 @@ const roles=[
 "Flutter Developer",
 "UI/UX Designer",
 "Azure Certified",
-"AI Enthusiast"
+"AI Enthusiast",
+"Web Developer"
 ];
 
 let i=0,j=0,del=false;
 const txt=document.getElementById("typing");
 
-function type(){
+(function type(){
 let word=roles[i];
 txt.textContent=word.substring(0,j);
 
@@ -416,8 +467,7 @@ i=(i+1)%roles.length;
 }
 }
 setTimeout(type,del?45:90);
-}
-type();
+})();
 </script>
 
 </body>
