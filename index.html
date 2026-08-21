@@ -8,324 +8,221 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;}
 
 body{
-font-family:'Inter',sans-serif;
-background:#060816;
-color:white;
-overflow-x:hidden;
+    font-family:'Inter',sans-serif;
+    background:#060816;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-/* Animated Background */
-
+/* Background Glow */
 body::before{
-content:"";
-position:fixed;
-width:600px;
-height:600px;
-background:#7c3aed;
-filter:blur(180px);
-top:-200px;
-left:-180px;
-opacity:.35;
-z-index:-3;
+    content:"";
+    position:fixed;
+    width:650px;
+    height:650px;
+    background:#7c3aed;
+    filter:blur(180px);
+    top:-220px;
+    left:-180px;
+    opacity:.35;
+    z-index:-2;
 }
-
 body::after{
-content:"";
-position:fixed;
-width:500px;
-height:500px;
-background:#2563eb;
-filter:blur(170px);
-bottom:-150px;
-right:-150px;
-opacity:.30;
-z-index:-3;
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#2563eb;
+    filter:blur(170px);
+    bottom:-170px;
+    right:-150px;
+    opacity:.3;
+    z-index:-2;
 }
 
 /* Navbar */
-
 nav{
-position:fixed;
-top:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:rgba(5,8,22,.55);
-backdrop-filter:blur(15px);
-z-index:999;
+    position:fixed;
+    width:100%;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(5,8,22,.55);
+    backdrop-filter:blur(15px);
+    z-index:999;
 }
-
 .logo{
-font-family:'Orbitron';
-font-size:22px;
-color:#a855f7;
+    font-family:'Orbitron';
+    color:#A855F7;
+    font-size:22px;
 }
-
 nav ul{
-display:flex;
-list-style:none;
-gap:28px;
+    display:flex;
+    list-style:none;
+    gap:28px;
 }
-
 nav a{
-color:#d1d5db;
-text-decoration:none;
+    color:#D1D5DB;
+    text-decoration:none;
 }
-
 nav a:hover{
-color:#fff;
+    color:#fff;
 }
 
 /* Hero */
-
 .hero{
-height:100vh;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 8%;
-background:
-linear-gradient(rgba(6,8,22,.82),rgba(6,8,22,.88)),
-url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
-background-size:cover;
-background-position:center;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 8%;
+    background:
+    linear-gradient(rgba(6,8,22,.82),rgba(6,8,22,.9)),
+    url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
 }
-
-.left{
-max-width:650px;
+.hero-content{
+    max-width:850px;
 }
-
 .tag{
-display:inline-block;
-padding:8px 18px;
-border-radius:30px;
-border:1px solid #8b5cf6;
-background:rgba(139,92,246,.12);
-color:#d8b4fe;
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    border:1px solid #8B5CF6;
+    background:rgba(139,92,246,.12);
+    color:#D8B4FE;
+    margin-bottom:20px;
 }
-
 h1{
-font-family:'Orbitron';
-font-size:68px;
-line-height:1.1;
-margin:20px 0;
+    font-family:'Orbitron';
+    font-size:70px;
+    line-height:1.1;
 }
-
 h1 span{
-background:linear-gradient(90deg,#a855f7,#3b82f6,#ec4899);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
+    background:linear-gradient(90deg,#A855F7,#3B82F6,#EC4899);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
-
 #typing{
-font-size:22px;
-color:#60a5fa;
-height:35px;
-margin-bottom:20px;
+    height:35px;
+    margin:22px 0;
+    font-size:22px;
+    color:#60A5FA;
+    font-weight:600;
 }
-
-p{
-color:#cbd5e1;
-line-height:1.8;
+.hero p{
+    color:#CBD5E1;
+    line-height:1.8;
+    font-size:17px;
 }
-
 .btns{
-margin-top:30px;
-display:flex;
-gap:16px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin-top:30px;
+    flex-wrap:wrap;
 }
-
 .btn{
-padding:14px 26px;
-border-radius:12px;
-font-weight:600;
-text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:600;
 }
-
 .primary{
-background:linear-gradient(135deg,#8b5cf6,#2563eb);
-color:white;
+    background:linear-gradient(135deg,#8B5CF6,#2563EB);
+    color:#fff;
 }
-
 .outline{
-border:1px solid #8b5cf6;
-color:white;
-backdrop-filter:blur(10px);
+    border:1px solid #8B5CF6;
+    color:#fff;
 }
 
-/* Profile Card */
-
-.profile{
-width:340px;
-height:420px;
-background:rgba(255,255,255,.06);
-backdrop-filter:blur(18px);
-border-radius:28px;
-border:1px solid rgba(255,255,255,.08);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-box-shadow:0 30px 60px rgba(0,0,0,.35);
-}
-
-.circle{
-width:180px;
-height:180px;
-border-radius:50%;
-background:linear-gradient(135deg,#8b5cf6,#2563eb,#ec4899);
-padding:5px;
-display:flex;
-align-items:center;
-justify-content:center;
-box-shadow:0 0 35px rgba(139,92,246,.45);
-}
-
-.avatar{
-width:100%;
-height:100%;
-border-radius:50%;
-background:#0b1120;
-display:flex;
-align-items:center;
-justify-content:center;
-font-family:'Orbitron',sans-serif;
-font-size:64px;
-font-weight:800;
-letter-spacing:4px;
-color:white;
-}
-
-.profile h2{
-margin-top:18px;
-font-family:'Orbitron';
-font-size:22px;
-}
-
-.profile small{
-color:#94a3b8;
-}
-
+/* Stats */
 .stats{
-display:flex;
-gap:16px;
-margin-top:22px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:45px;
 }
-
-.box{
-background:rgba(255,255,255,.06);
-padding:12px;
-border-radius:14px;
-text-align:center;
-width:70px;
+.stat{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    padding:18px;
 }
-
-.box h3{
-color:#a855f7;
+.stat h3{
+    font-family:'Orbitron';
+    color:#A855F7;
+    font-size:28px;
 }
 
 /* Sections */
-
 section{
-padding:90px 8%;
+    padding:90px 8%;
 }
-
 .title{
-font-family:'Orbitron';
-font-size:34px;
-text-align:center;
-margin-bottom:40px;
-color:#d8b4fe;
+    font-family:'Orbitron';
+    text-align:center;
+    font-size:34px;
+    color:#D8B4FE;
+    margin-bottom:40px;
 }
-
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:22px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
 }
-
 .card{
-background:rgba(255,255,255,.05);
-backdrop-filter:blur(15px);
-padding:24px;
-border-radius:20px;
-border:1px solid rgba(255,255,255,.08);
-transition:.35s;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(14px);
+    border-radius:20px;
+    padding:24px;
+    transition:.35s;
 }
-
 .card:hover{
-transform:translateY(-8px);
-border-color:#8b5cf6;
-box-shadow:0 20px 40px rgba(139,92,246,.25);
+    transform:translateY(-8px);
+    border-color:#8B5CF6;
+    box-shadow:0 20px 40px rgba(139,92,246,.25);
 }
-
 .bar{
-height:8px;
-background:#1f2937;
-border-radius:20px;
-margin-top:10px;
-overflow:hidden;
+    height:8px;
+    background:#1F2937;
+    border-radius:20px;
+    margin-top:10px;
+    overflow:hidden;
 }
-
 .fill{
-height:100%;
-background:linear-gradient(90deg,#8b5cf6,#2563eb);
+    height:100%;
+    background:linear-gradient(90deg,#8B5CF6,#2563EB);
 }
-
 footer{
-padding:30px;
-text-align:center;
-color:#94a3b8;
-border-top:1px solid rgba(255,255,255,.08);
+    text-align:center;
+    padding:28px;
+    color:#94A3B8;
+    border-top:1px solid rgba(255,255,255,.08);
 }
 
-@media(max-width:900px){
-
-.hero{
-flex-direction:column;
-justify-content:center;
-text-align:center;
-gap:50px;
+/* Mobile */
+@media(max-width:768px){
+    h1{font-size:42px;}
+    nav ul{display:none;}
+    .stats{grid-template-columns:repeat(2,1fr);}
 }
-
-.profile{
-width:300px;
-height:380px;
-}
-
-h1{
-font-size:42px;
-}
-
-nav ul{
-display:none;
-}
-
-.btns{
-justify-content:center;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
 <nav>
-
 <div class="logo">HARIPRASAD</div>
 
 <ul>
@@ -334,89 +231,73 @@ justify-content:center;
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
-<div class="hero">
+<!-- HERO (NO PHOTO) -->
 
-<div class="left">
+<section class="hero">
+
+<div class="hero-content">
 
 <div class="tag">
-AZ-900 • Flutter • AI
+AZ-900 • Flutter • AI • SIH Finalist
 </div>
 
 <h1>
-HARIPRASAD
-<span>AK</span>
+HARIPRASAD <span>AK</span>
 </h1>
 
 <div id="typing"></div>
 
 <p>
-Computer Science Engineer specializing in Flutter Development,
-UI/UX Design, Artificial Intelligence and Cloud Computing.
-Building premium digital experiences with modern technologies.
+Computer Science Engineer specializing in Flutter Development, UI/UX Design,
+Artificial Intelligence and Cloud Computing. Passionate about building premium
+digital experiences with modern technologies.
 </p>
 
 <div class="btns">
-
-<a href="#" class="btn primary">
-Download Resume
-</a>
-
-<a href="#" class="btn outline">
-LinkedIn
-</a>
-
+<a href="#" class="btn primary">Download Resume</a>
+<a href="#" class="btn outline">LinkedIn</a>
 </div>
-
-</div>
-
-<div class="profile">
-
-<div class="circle">
-
-<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80">
-
-</div>
-
-<h2>HARIPRASAD AK</h2>
-
-<small>Software Developer</small>
 
 <div class="stats">
 
-<div class="box">
+<div class="stat">
 <h3>03</h3>
-<small>Apps</small>
+<p>Projects</p>
 </div>
 
-<div class="box">
+<div class="stat">
 <h3>02</h3>
-<small>Intern</small>
+<p>Internships</p>
 </div>
 
-<div class="box">
+<div class="stat">
 <h3>AZ</h3>
-<small>Cert</small>
+<p>Certified</p>
+</div>
+
+<div class="stat">
+<h3>2027</h3>
+<p>Graduate</p>
 </div>
 
 </div>
 
 </div>
 
-</div>
+</section>
 
 <section id="about">
 
 <h2 class="title">ABOUT ME</h2>
 
 <div class="card">
-
-I am pursuing BE Computer Science at Karpagam Institute of Technology.
+<p>
+I am pursuing BE Computer Science & Engineering at Karpagam Institute of Technology.
 My interests include Flutter, Firebase, Python, Azure Cloud and UI/UX Design.
-I love transforming ideas into elegant applications.
-
+I enjoy creating elegant software solutions for real-world problems.
+</p>
 </div>
 
 </section>
@@ -459,7 +340,7 @@ I love transforming ideas into elegant applications.
 
 <div class="card">
 <h3>🌱 AI Crop Recommendation</h3>
-<p>ML powered agriculture mobile application using Flutter & Firebase.</p>
+<p>Machine learning based agriculture mobile application using Flutter & Firebase.</p>
 </div>
 
 <div class="card">
@@ -469,7 +350,7 @@ I love transforming ideas into elegant applications.
 
 <div class="card">
 <h3>🚲 Smart Bike Parking</h3>
-<p>Automatic number plate recognition and digital payment parking.</p>
+<p>Automatic number plate recognition with digital payment parking.</p>
 </div>
 
 </div>
@@ -483,17 +364,17 @@ I love transforming ideas into elegant applications.
 <div class="grid">
 
 <div class="card">
-<h3>Email</h3>
+<h3>📧 Email</h3>
 <p>akhari482005@gmail.com</p>
 </div>
 
 <div class="card">
-<h3>Phone</h3>
+<h3>📱 Phone</h3>
 <p>+91 8122942946</p>
 </div>
 
 <div class="card">
-<h3>Location</h3>
+<h3>📍 Location</h3>
 <p>Coimbatore, Tamil Nadu</p>
 </div>
 
@@ -502,13 +383,10 @@ I love transforming ideas into elegant applications.
 </section>
 
 <footer>
-
 Designed by Hariprasad AK • 2026
-
 </footer>
 
 <script>
-
 const roles=[
 "Flutter Developer",
 "UI/UX Designer",
@@ -516,52 +394,30 @@ const roles=[
 "AI Enthusiast"
 ];
 
-let i=0;
-let j=0;
-let del=false;
-
+let i=0,j=0,del=false;
 const txt=document.getElementById("typing");
 
 function type(){
-
 let word=roles[i];
-
 txt.textContent=word.substring(0,j);
 
 if(!del){
-
 j++;
-
 if(j>word.length){
-
 del=true;
-
 setTimeout(type,1200);
-
 return;
-
 }
-
 }else{
-
 j--;
-
-if(j==0){
-
+if(j===0){
 del=false;
-
 i=(i+1)%roles.length;
-
 }
-
 }
-
 setTimeout(type,del?45:90);
-
 }
-
 type();
-
 </script>
 
 </body>
